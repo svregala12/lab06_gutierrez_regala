@@ -1,5 +1,5 @@
 // heap.cpp
-// Diba Mirza
+// Steve Regala | Angel Gutierrez
 
 #include "heap.h"
 #include <iostream>
