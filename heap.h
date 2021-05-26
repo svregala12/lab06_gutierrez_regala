@@ -17,8 +17,8 @@ class Heap{
    int top();
    bool empty();
  
-   void minHeapPercolateUp(int nodeIndex);
-   void minHeapPercolateDown(int nodeIndex);
+   void minHeapPercolateUp(int nodeIndex);   // use for push algorithm
+   void minHeapPercolateDown(int nodeIndex); // use for pop algorithm
     
  private:
    std::vector<int> vdata; //store the binary heap tree as a dynamic array

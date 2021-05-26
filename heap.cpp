@@ -26,7 +26,7 @@ void Heap::pop(){
   else {
     std::swap(vdata[0], vdata[vdata.size()-1]);
     vdata.pop_back();
-    minHeapPercolateDown(vdata[0]);
+    minHeapPercolateDown(0);
   }
 
 }
@@ -76,7 +76,6 @@ void Heap::minHeapPercolateUp(int nodeIndex) {
 void Heap::minHeapPercolateDown(int nodeIndex) {
 
   int childIndex = 2*nodeIndex + 1;
-  //int parentIndex = (nodeIndex - 1)/2;
   int val = vdata[nodeIndex];
   int minValue;
   int minIndex;
@@ -100,7 +99,7 @@ void Heap::minHeapPercolateDown(int nodeIndex) {
     }
 
     else {
-      std::swap(vdata[nodeIndex], vdata[parentIndex]);
+      std::swap(vdata[nodeIndex], vdata[minIndex]);
       nodeIndex = minIndex;
       childIndex = 2*nodeIndex + 1;
     }
